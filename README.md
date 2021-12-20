@@ -9,8 +9,10 @@
 
 安装 react 组件
 `yarn add react react-dom`
+
 安装webpack相关
-`yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin `
+`yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin`
+
 安装 swc
 `yarn add -D @swc/cli @swc/core swc-loader`
 
