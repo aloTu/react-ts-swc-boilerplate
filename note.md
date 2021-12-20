@@ -3,10 +3,6 @@
 2. 代码转义器(babel、swc...)  也叫js编译器, 将jsx、ts等非js语言和js新特性编译成浏览器支持的模样
 3. 前端框架
 
-## 其他
-HMR：热编译，在开发时组件更新时，无需刷新浏览器便可得到最新结果
-
-
 ## 构建一个 swc 的react项目
 
 ### 新建一个文件夹 安装必要包
@@ -24,3 +20,12 @@ HMR：热编译，在开发时组件更新时，无需刷新浏览器便可得�
 之前使用babel-loader 的地方现在使用 swc-loader[配置方法](https://swc.rs/docs/usage/swc-loader)
 2. swc
 [配置文档](https://swc.rs/docs/configuration/compilation)
+
+### 添加一些细节
+
+typescript 使用ts进行开发
+
+eslint,prettier 规范美化代码格式
+
+husky,lint-staged 实现提交前的统一优化
+
