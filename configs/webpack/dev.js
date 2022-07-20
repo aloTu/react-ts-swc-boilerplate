@@ -1,21 +1,22 @@
 /* eslint-disable */
-const { resolve } = require("path");
+const {resolve, posix} = require('path');
 
-const { merge } = require("webpack-merge");
-const commonConfig = require("./");
+const {merge} = require('webpack-merge');
+const commonConfig = require('./');
 
 module.exports = merge(commonConfig, {
-  mode: "development",
-  entry: "./index.tsx",
+  mode: 'development',
+  entry: './index.tsx',
   devServer: {
     static: {
-      directory: resolve(__dirname, "public"),
+      directory: resolve(__dirname, 'public'),
     },
     compress: true,
+    historyApiFallback: true,
     port: 3000,
   },
   output: {
-    publicPath: "/",
+    publicPath: '/',
   },
-  devtool: "eval-source-map",
+  devtool: 'eval-source-map',
 });

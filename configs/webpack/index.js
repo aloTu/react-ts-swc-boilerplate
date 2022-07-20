@@ -27,6 +27,12 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'less-loader'],
       },
       {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        // 上一行表示只在jsx 和tsx 中使用
+        use: ['@svgr/webpack'],
+      },
+      {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: ['swc-loader'],

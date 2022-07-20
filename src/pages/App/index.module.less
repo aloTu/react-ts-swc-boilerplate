@@ -1,0 +1,97 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background:#000;
+}
+.wrap {
+  background: #f5f6f7;
+  margin: 40px auto;
+  padding:12px;
+  font-size: 14px;
+  color:#767c85;
+  .title {
+    margin: 0 0 12px 14px;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 0;
+    .btnRefresh {
+      flex-grow: 1;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      margin-left: 8px;
+      &:hover {
+        color: #417ff9;
+        &::before {
+          background: #417ff8;
+        }
+      }
+      &::before {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        display: inline-block;
+        content:'';
+        mask: url('@/assets/imgs/icons/refreash.svg');
+        -webkit-mask: url('@/assets/imgs/icons/refreash.svg') no-repeat 50% 50%;
+        mask: url('@/assets/imgs/icons/refreash.svg') no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background: #767c85;
+        vertical-align: middle;
+      }
+    }
+    .btnClose {
+      &:hover {
+        fill: #417ff9;
+      }
+    }
+  }
+}
+.cardWrap {
+  display: flex;
+  border: 1px solid #e7e9eb;
+  cursor: pointer;
+  border-radius: 2px;
+  width: 204px;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 86px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin: 0 14px 14px 0;
+  &:hover {
+    box-shadow: 0 4px 16px 0 rgb(192 198 207 / 50%);
+  }
+  .cardImg {
+    margin-left: 16px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+  .info {
+    margin: 0 14px;
+    .name {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-wrap: normal;
+      color: #3d4757;
+      line-height: 20px;
+      font-size: 14px;
+    }
+    .desc {
+      color: #949aae;
+      font-size: 12px;
+      line-height: 18px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-wrap: normal;
+    }
+  }
+}
